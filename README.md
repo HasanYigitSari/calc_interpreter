@@ -1,4 +1,4 @@
-# calc_interpreter
+# calc_interpreter Hasan Yiğit Sarı 231101050
 
 Lex dosyasında önce okunan herhangi bir sayıdaki rakam karakterini birleştirip sayıya çevirip o sayıyı bir tokene atayan satırı,
 sonra her işlem işareti ve parantez için ayrı bir token satırı yazdım.
