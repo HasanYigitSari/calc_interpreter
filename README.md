@@ -10,11 +10,11 @@ Sonra union'da num diye bir integer oluşturdum, sonradan da NUMBER tokenini int
 İşaretler için böyle birşey kullanmadım, ama expr "expression"'un türü de num (int)
 İşaretler için öncelik ve yönleri sıraladım: Parantezler "sırasız" > Çarpı/Bölü "soldan sağa" > Artı/Eksi "soldan sağa"
 Tek tek expression'ları yazdım ve çıkan sonuçları global değişkene eşitledim.
-Mesela: expr plus expr ;ŞŞ = Ş1 + Ş3; olur. Burada $1 ilk gelen expr, $3'te üçüncü yapı yani ikinci değişken
+Mesela: expr plus expr ŞŞ = Ş1 + Ş3 olur. Burada $1 ilk gelen expr, $3'te üçüncü yapı yani ikinci değişken
 Sonuç ŞŞ oluyor ve bundan sonra result global değişkenine ŞŞ atanıyor
 Bölmede ayrıca bir özel durum ekledim, bölen sıfır ise hata veriyor
 Parantezli ve Number'li durumlarda gelen expr değişmeden yoluna devam ediyor. 
-lparen expr rparen ;$$ = $2;, number ;ŞŞ = Ş1;
+lparen expr rparen $$ = $2, number ŞŞ = Ş1
 main önce girdi işlemi istiyor, sonra parse'a başlıyor ve okuyor, bitirince ve işlemler bitince result'un son değeri sonuç olarak basılıyor
 çünkü result ŞŞ'nin her değişmesinde güncelleniyor ve zaten son expr değeri aynı zamanda son ŞŞ ve son result değeri oluyor. yani işlemin sonucu
 yyerror ise de başka bir hata çıkarsa diye var
