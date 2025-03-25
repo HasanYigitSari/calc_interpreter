@@ -7,8 +7,8 @@ Eğer input'un sonuna gelinirse 1 dönülür ve biter.
 
 Yacc dosyasında ise ilk bir global değişken oluşturdum, sonucu tutmak için
 Sonra union'da num diye bir integer oluşturdum, sonradan da NUMBER tokenini int cinsinden olsun diye num'u kullandım
-İşaretler için böyle birşey kullanmadım, ama expr (expression)'un türü de num (int)
-İşaretler için öncelik ve yönleri sıraladım: Parantezler (sırasız) > Çarpı/Bölü (soldan sağa) > Artı/Eksi (soldan sağa)
+İşaretler için böyle birşey kullanmadım, ama expr "expression"'un türü de num (int)
+İşaretler için öncelik ve yönleri sıraladım: Parantezler "sırasız" > Çarpı/Bölü "soldan sağa" > Artı/Eksi "soldan sağa"
 Tek tek expression'ları yazdım ve çıkan sonuçları global değişkene eşitledim.
 Mesela: expr plus expr {ŞŞ = Ş1 + Ş3} olur. Burada $1 ilk gelen expr, $3'te üçüncü yapı yani ikinci değişken
 Sonuç ŞŞ oluyor ve bundan sonra result global değişkenine ŞŞ atanıyor
