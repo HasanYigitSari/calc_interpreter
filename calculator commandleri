@@ -2,3 +2,15 @@ lex calculator.l
 yacc -d calculator.y
 gcc lex.yy.c y.tab.c -o calculator
 ./calculator
+
+/*
+3 + 5
+10 * 4
+(1 + 2) * 4
+(3 + 5) * (2 - 1) / 4
+(10 + 2 * 3) / (5 - 1)
+10 / 0
+(3 + 5) / (2 - 2)
+
+rastgele test case'ler
+*/
