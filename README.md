@@ -19,3 +19,19 @@ main önce girdi işlemi istiyor, sonra parse'a başlıyor ve okuyor, bitirince 
 çünkü result ŞŞ'nin her değişmesinde güncelleniyor ve zaten son expr değeri aynı zamanda son ŞŞ ve son result değeri oluyor. yani işlemin sonucu
 yyerror ise de başka bir hata çıkarsa diye var
  
+lex calculator.l
+yacc -d calculator.y
+gcc lex.yy.c y.tab.c -o calculator
+./calculator
+
+/*
+3 + 5
+10 * 4
+(1 + 2) * 4
+(3 + 5) * (2 - 1) / 4
+(10 + 2 * 3) / (5 - 1)
+10 / 0
+(3 + 5) / (2 - 2)
+
+rastgele test case'ler
+*/
